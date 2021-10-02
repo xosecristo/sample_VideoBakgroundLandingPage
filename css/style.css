@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Roboto&display=swap');
+
+:root{
+    --primary: #fec89a;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+nav, .hero h1, .btn{
+    font-family: 'Poppins', sans-serif;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.8; */
+}
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 2rem;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 10;
+
+    color:var(--primary);
+}
+#menu{
+    width: 40px;
+    height: 40px;
+    color:#fff;
+}
+/* HERO */
+/* HERO */
+/* HERO */
+.hero{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    width: 50vw;
+    justify-content: center;
+    padding-left: 2rem;
+    opacity: 0.2;
+    color:#fff;
+    
+    position: absolute;
+    transform: translateX(-100%);
+    left: 0;
+}
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 5rem;
+}
+p {
+    margin: 2rem 0;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+}
+.btn {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--primary);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #fff;
+    opacity: 0;
+}
