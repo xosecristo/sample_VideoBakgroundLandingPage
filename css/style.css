@@ -17,8 +17,11 @@ a:active{
     padding: 0;
     margin: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
 nav, .hero h1, .btn{
@@ -29,9 +32,30 @@ video{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: cover;
     /* opacity: 0.8; */
+}
+section{
+    height: 95vh;
+}
+.ups{
+    height: 5vh;
+    /* position: relative;
+    bottom: 0; */
+}
+footer{
+    position: fixed;
+    bottom: -5vh;
+    width: 100vw;
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 5vh;
+    z-index: 10;
+}
+footer a:visited{
+    color: black;
 }
 /* NAVBAR */
 /* NAVBAR */
@@ -140,19 +164,126 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
     background-color: #fff;
-    opacity: 0;
+    /* opacity: 0; */
     transition: 0.5s;
+    /* position: relative; */
+    /* z-index: 10; */
 }
 .btn:hover{
     transition: 0.5s;
     background-color: var(--primary);
     color:#fff !important;
 }
+#landing .btn{
+    opacity: 0;
+    transform: scale(1.1);
+    transform: translateX(1px);
+}
+
+/* ABOUT */
+/* ABOUT */
+/* ABOUT */
+#About.view{
+    background-color: var(--primary);
+}
+.view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25vh;
+}
+.letter{
+    position: relative;
+    z-index: 10;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.circle{
+    background-color: #fff;
+    border-radius: 100%;
+    width: 25rem;
+    height: 25rem;
+
+    position: absolute;
+    align-items: center;
+}
+/* CONTACT */
+#Contact.view{
+        background-color: #fff;
+}
+.circle.alt.contact-circle{
+    background-color: var(--primary);
+    width: 30rem;
+    height: 30rem;
+    opacity: 0;
+}
+/* .circle.alt:hover{
+    background-color: var(--primary);
+    transition: 1s;
+} */
+#Contact p{
+    margin-bottom: 1rem;
+    color:#fff;
+    font-weight: bold;
+    position: relative;
+}
+#Contact .btn{
+    display:inline;
+    height: auto;
+    width: auto;
+    padding:0.5rem 1rem;
+    background-color: #fff;
+    color: var(--primary) !important;
+}
+/* SERVICE */
+/* SERVICE */
+/* SERVICE */
+/* SERVICE */
+.row{
+    display: flex;
+    height: 47.5vh;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    position: relative
+}
+.card .letter{
+    font-size: 1.25rem;
+    padding: 0 5rem;
+    /* color:var(--primary); */
+}
+.card.alt{
+    background-color: var(--primary);
+    color: #fff;
+}
+.card img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hiddeForDesktop{
+    display: none;
+}
+
 
 @media (max-width : 1080px) {
     .hero{
         width: 70vw;
     }
+    .view{
+        padding: 0 6vw;
+    }
+    .view .letter{
+        font-size: 1.3rem;
+    }
+
 }
 
 @media (max-width: 700px) {
@@ -168,4 +299,42 @@ nav a {
         width: calc(95% - 1rem);
         background-color: #bdcfd4;
     }
+    /* ABOUT */
+    .view .letter{
+        font-size: 1.2rem;
+    }
+    .circle{
+        width: 30rem;
+        height: 30rem;
+    }
+    /* SERVICE */
+    #Service{
+        width: 100vh;
+    }
+    .row{
+        height: auto;
+        align-items: flex-start;
+    }
+    .card{
+        width: 100vw;
+        height: 25vh;
+    }
+    .card .letter{
+        height: auto;
+        font-size: 1rem;
+        padding: 0 3vw;
+    }
+    .hiddeForDesktop{
+        display: flex;
+    }
+    .ups, .hiddeForPhone{
+        display: none;
+    }
+    /* CONTACT */
+    
+.circle.alt.contact-circle{
+    background-color: var(--primary);
+    width: 25rem;
+    height: 25rem;
+    opacity: 0;
 }
