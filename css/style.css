@@ -244,7 +244,6 @@ nav a {
 .row{
     display: flex;
     height: 47.5vh;
-    flex-wrap: wrap;
 }
 .card{
     display: flex;
@@ -314,6 +313,7 @@ nav a {
     .row{
         height: auto;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
     .card{
         width: 100vw;
@@ -337,4 +337,5 @@ nav a {
     width: 25rem;
     height: 25rem;
     opacity: 0;
+    }
 }

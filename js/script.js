@@ -21,17 +21,17 @@ function showMenu(e) {
         setTimeout(
             function () { nav.classList.remove('active') }, 500
         );
-
-
     }
 }
 
 function Showcase() {
     const a1 = document.querySelector('.showcase_a_1');
     const b1 = document.querySelector('.showcase_b_1');
+    const c1 = document.querySelector('.showcase_a_1-alt');
     const PhotosTimeLine = gsap.timeline({ defaults: { duration: 4, ease: 'none', repeat: -1, delay: 1 } });
     PhotosTimeLine.to(a1, { opacity: 0, yoyo: true });
     PhotosTimeLine.to(b1, { opacity: 0, yoyo: true });
+    PhotosTimeLine.to(c1, { opacity: 0, yoyo: true });
 }
 
 function showCircle(e) {
